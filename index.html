@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>brainfuck</title>
+
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css" />
+  </head>
+  <body>
+    <h1>brainfuck</h1>
+
+    <form id="brainfuck-parameters">
+      <fieldset>
+        <legend>io</legend>
+
+        <p>
+          <textarea id="io-code" name="assdf"></textarea>
+          <label for="io-code">brainfuck program</label>
+        </p>
+
+        <p>
+          <textarea id="io-input"></textarea>
+          <label for="io-input">input queue</label>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>implementation</legend>
+
+        <p>
+          <input id="implementation-dumb" type="radio" value="dumb" checked />
+          <label for="implementation-dumb">dumb</label>
+        </p>
+      </fieldset>
+
+      <button type="submit">go</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script type="module" src="/src/app/main.ts"></script>
+  </body>
+</html>
