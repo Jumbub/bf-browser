@@ -11,18 +11,18 @@
   <body>
     <h1>brainfuck</h1>
 
-    <form id="brainfuck-parameters">
+    <form id="brainfuck">
       <fieldset>
         <legend>io</legend>
 
         <p>
-          <textarea id="io-code" name="assdf"></textarea>
-          <label for="io-code">brainfuck program</label>
+          <label for="code" style="display: block">brainfuck program</label>
+          <textarea id="code" name="code" width="100%"></textarea>
         </p>
 
         <p>
-          <textarea id="io-input"></textarea>
-          <label for="io-input">input queue</label>
+          <label for="input" style="display: block">input queue</label>
+          <textarea id="input" name="input"></textarea>
         </p>
       </fieldset>
 
@@ -30,7 +30,7 @@
         <legend>implementation</legend>
 
         <p>
-          <input id="implementation-dumb" type="radio" value="dumb" checked />
+          <input id="implementation-dumb" name="implementation" type="radio" value="dumb" checked />
           <label for="implementation-dumb">dumb</label>
         </p>
       </fieldset>
@@ -38,7 +38,8 @@
       <button type="submit">go</button>
     </form>
 
-    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
-    <script type="module" src="/src/app/main.ts"></script>
+    <div id="memory"></div>
+
+    <script type="module" src="/src/ui/main.ts"></script>
   </body>
 </html>
